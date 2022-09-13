@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sejours",
+  "info": {
+    "singularName": "sejour",
+    "pluralName": "sejours",
+    "displayName": "Sejour"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Arrivee": {
+      "type": "date"
+    },
+    "depart": {
+      "type": "date"
+    },
+    "Info": {
+      "type": "string"
+    },
+    "familles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::famille.famille",
+      "mappedBy": "sejour"
+    }
+  }
+}

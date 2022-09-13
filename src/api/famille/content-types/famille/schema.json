@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "familles",
+  "info": {
+    "singularName": "famille",
+    "pluralName": "familles",
+    "displayName": "Famille",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Nom": {
+      "type": "string",
+      "unique": true
+    },
+    "sejour": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::sejour.sejour",
+      "inversedBy": "familles"
+    }
+  }
+}
